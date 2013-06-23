@@ -1,0 +1,9 @@
+{
+    "name" : "qimage",
+    "version" : "1.0.0",
+    "readme" : "README.md",
+    "main" : "./build/qimage.min.js",
+    "dependencies" : {
+        "q" : "~0.9"
+    }
+}

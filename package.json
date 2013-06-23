@@ -1,0 +1,28 @@
+{
+  "name": "qimage",
+  "version": "1.0.0",
+  "description": "Simple Promise Image Loader based on Q",
+  "keywords": [
+    "q",
+    "promise",
+    "image",
+    "loader"
+  ],
+  "author": "Gaëtan Renaudeau <renaudeau.gaetan@gmail.com>",
+  "dependencies" : {
+    "q"   :  "0.9.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-docco": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.4"
+  },
+  "main": "Gruntfile.js",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gre/qimage.git"
+  }
+}
