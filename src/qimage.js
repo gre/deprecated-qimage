@@ -9,6 +9,8 @@
     }
 })(function () {
 
+  var Q = window.Q || require("q");
+
   // QImage
   // ===
   // *Creates an Image Loader.*
