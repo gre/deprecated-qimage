@@ -1,7 +1,13 @@
 /*
  * Qimage - Simple Promise Image Loader based on Q
  */
-(function () {
+(function (definition) {
+    if (typeof exports === "object") {
+        module.exports = definition();
+    } else {
+        window.Qimage = definition();
+    }
+})(function () {
 
   // QImage
   // ===
@@ -15,7 +21,7 @@
   // ---
   // Returns a **(Promise of Image)**
   //
-  window.Qimage = function (url) {
+  var Qimage = function (url) {
     var img = new Image();
     var d = Q.defer();
     img.onload = function () {
@@ -31,6 +37,8 @@
     return d.promise;
   };
 
-})();
+  return Qimage;
+
+});
 
 
