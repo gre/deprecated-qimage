@@ -6,7 +6,8 @@
     "q",
     "promise",
     "image",
-    "loader"
+    "loader",
+    "browser"
   ],
   "author": "Gaëtan Renaudeau <renaudeau.gaetan@gmail.com>",
   "dependencies" : {
