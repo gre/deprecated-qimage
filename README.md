@@ -33,7 +33,7 @@ Qimage("images/foo.png").then(function (img) {
 
 ### Multiple image loading
 
-```
+```javascript
 Q.all([
   Qimage("res1.png"),
   Qimage("res2.png"),
@@ -48,7 +48,7 @@ Q.all([
 
 ### Mixing with Qajax
 
-```
+```javascript
 Qajax.getJSON("http://my-image-service.com/images/today.json?limit=10")
 .get("images") // my json has an "images" array
 .then(function (images) {
