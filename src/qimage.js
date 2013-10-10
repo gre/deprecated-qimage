@@ -18,14 +18,18 @@
   // Parameters
   // ---
   // `url` **(string)**: load an Image with its URL
+  // `options` **(obeject)**: configuration object
   //
   // Result
   // ---
   // Returns a **(Promise of Image)**
   //
-  var Qimage = function (url) {
+  var Qimage = function (url, options) {
+    options = options || {};
     var img = new Image();
-    img.crossOrigin = "Anonymous";
+    if (options.crossorigin) {
+      img.crossOrigin = options.crossorigin;
+    }
     var d = Q.defer();
     img.onload = function () {
       d.resolve(img);
