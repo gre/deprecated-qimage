@@ -15,12 +15,17 @@
 
 <h2>Parameters</h2>
 
-<p><code>url</code> <strong>(string)</strong>: load an Image with its URL</p>
+<p><code>url</code> <strong>(string)</strong>: load an Image with its URL
+<code>options</code> <strong>(object)</strong>: configuration object</p>
 
 <h2>Result</h2>
 
-<p>Returns a <strong>(Promise of Image)</strong></p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">Qimage</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<p>Returns a <strong>(Promise of Image)</strong></p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">Qimage</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">options</span> <span class="o">=</span> <span class="nx">options</span> <span class="o">||</span> <span class="p">{};</span>
     <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">crossorigin</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">img</span><span class="p">.</span><span class="nx">crossOrigin</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">crossorigin</span><span class="p">;</span>
+    <span class="p">}</span>
     <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">Q</span><span class="p">.</span><span class="nx">defer</span><span class="p">();</span>
     <span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
       <span class="nx">d</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
