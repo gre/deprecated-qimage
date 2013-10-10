@@ -10,6 +10,12 @@
     "browser"
   ],
   "author": "Gaëtan Renaudeau <renaudeau.gaetan@gmail.com>",
+  "contributors": [ 
+    {
+      "name": "Paul Panserrieu",
+      "email": "paul@42loops.com"
+    } 
+  ],
   "dependencies" : {
     "q"   :  "0.9.x"
   },
