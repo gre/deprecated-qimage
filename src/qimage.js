@@ -18,7 +18,7 @@
   // Parameters
   // ---
   // `url` **(string)**: load an Image with its URL
-  // `options` **(obeject)**: configuration object
+  // `options` **(object)**: configuration object
   //
   // Result
   // ---
