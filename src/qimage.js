@@ -25,6 +25,7 @@
   //
   var Qimage = function (url) {
     var img = new Image();
+    img.crossOrigin = "Anonymous";
     var d = Q.defer();
     img.onload = function () {
       d.resolve(img);
