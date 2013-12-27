@@ -19,7 +19,7 @@ Usage
 
 `Qimage` takes an URL *(string)* and returns a *Promise of Image*.
 
-**`Qimage(url: String) => Promise[Image]`**
+**`Qimage(url: String, options) => Promise[Image]`**
 
 ### Simple example
 
@@ -29,6 +29,15 @@ Qimage("images/foo.png").then(function (img) {
 }, function (error) {
   document.body.innerHTML = "Unable to load the image";
 });
+```
+
+### Making Anonymous crossOrigin request
+
+```javascript
+Qimage("https://example.com/image.jpg", { crossOrigin: "Anonymous" })
+  .then(function (img) {
+    // I'm now allowed to draw img on a Canvas for instance. (CORS restriction)
+  });
 ```
 
 ### Multiple image loading

@@ -27,8 +27,8 @@
   var Qimage = function (url, options) {
     options = options || {};
     var img = new Image();
-    if (options.crossorigin) {
-      img.crossOrigin = options.crossorigin;
+    if (options.crossOrigin) {
+      img.crossOrigin = options.crossOrigin;
     }
     var d = Q.defer();
     img.onload = function () {
