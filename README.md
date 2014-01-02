@@ -75,7 +75,7 @@ Qajax.getJSON("http://my-image-service.com/images/today.json?limit=10")
 ### Support for CORS
 
 ```javascript
-Qimage("http://example.png/foo.png", { crossorigin: "Anonymous" }).then(function (img) {
+Qimage("http://example.png/foo.png", { crossOrigin: "Anonymous" }).then(function (img) {
   canvasctx.drawImage(img);
 });
 ```
