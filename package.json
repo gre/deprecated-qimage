@@ -1,6 +1,6 @@
 {
   "name": "qimage",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple Promise Image Loader based on Q",
   "keywords": [
     "q",
@@ -17,7 +17,7 @@
     } 
   ],
   "dependencies" : {
-    "q"   :  "0.9.x"
+    "q"   :  "1.0.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
