@@ -3,13 +3,11 @@
  */
 (function (definition) {
     if (typeof exports === "object") {
-        module.exports = definition();
+        module.exports = definition(require("q"));
     } else {
-        window.Qimage = definition();
+        window.Qimage = definition(window.Q);
     }
-})(function () {
-
-  var Q = window.Q || require("q");
+})(function (Q) {
 
   // QImage
   // ===
@@ -26,7 +24,10 @@
   //
   var Qimage = function (url, options) {
     options = options || {};
-    var img = new Image();
+    if (!Qimage.Image) {
+      throw new Error("You must define Qimage.Image if not in window context.");
+    }
+    var img = new Qimage.Image();
     if (options.crossOrigin) {
       img.crossOrigin = options.crossOrigin;
     }
@@ -43,6 +44,10 @@
     img.src = url;
     return d.promise;
   };
+
+  if (typeof window !== "undefined") {
+    Qimage.Image = window.Image;
+  }
 
   return Qimage;
 
