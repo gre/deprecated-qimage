@@ -45,6 +45,10 @@
     <span class="nx">Qimage</span><span class="p">.</span><span class="nx">Image</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">Image</span><span class="p">;</span>
   <span class="p">}</span>
 
+  <span class="nx">Qimage</span><span class="p">.</span><span class="nx">anonymously</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">Qimage</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span> <span class="nx">crossOrigin</span><span class="o">:</span> <span class="s2">&quot;Anonymous&quot;</span> <span class="p">});</span>
+  <span class="p">};</span>
+
   <span class="k">return</span> <span class="nx">Qimage</span><span class="p">;</span>
 
 <span class="p">});</span>

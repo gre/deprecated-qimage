@@ -49,6 +49,10 @@
     Qimage.Image = window.Image;
   }
 
+  Qimage.anonymously = function (url) {
+    return Qimage(url, { crossOrigin: "Anonymous" });
+  };
+
   return Qimage;
 
 });
