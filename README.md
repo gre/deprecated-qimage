@@ -8,18 +8,21 @@ Qimage [![Build Status](https://travis-ci.org/gre/qimage.png?branch=master)](htt
 Installation
 ---
 
+on [NPM](https://npmjs.org/package/qimage):
 ```sh
-bower install qimage
+npm install qimage
 ```
 
-Also available on [NPM](https://npmjs.org/package/qimage).
+Bower is also supported.
 
-Usage
+Usage Examples
 ---
 
 `Qimage` takes an URL *(string)* and returns a *Promise of Image*.
 
-**`Qimage(url: String, options) => Promise[Image]`**
+**`Qimage(url: String) => Promise[Image]`**
+
+**`Qimage.anonymously(url: String) => Promise[Image]`**
 
 ### Simple example
 
@@ -31,12 +34,13 @@ Qimage("images/foo.png").then(function (img) {
 });
 ```
 
-### Making Anonymous crossOrigin request
+### Making Anonymous Cross Origin requests
 
 ```javascript
-Qimage("https://example.com/image.jpg", { crossOrigin: "Anonymous" })
+Qimage.anonymously("https://example.com/image.jpg")
   .then(function (img) {
-    // I'm now allowed to draw img on a Canvas for instance. (CORS restriction)
+    // I'm now allowed to use img in a Canvas for instance. (CORS restriction)
+    canvasctx.drawImage(img);
   });
 ```
 
@@ -72,10 +76,3 @@ Qajax.getJSON("http://my-image-service.com/images/today.json?limit=10")
 .fail(displayError);
 ```
 
-### Support for CORS
-
-```javascript
-Qimage("http://example.png/foo.png", { crossOrigin: "Anonymous" }).then(function (img) {
-  canvasctx.drawImage(img);
-});
-```
