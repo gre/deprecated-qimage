@@ -1,6 +1,6 @@
 {
   "name": "qimage",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Simple Promise Image Loader based on Q",
   "keywords": [
     "q",
@@ -10,14 +10,14 @@
     "browser"
   ],
   "author": "Gaëtan Renaudeau <renaudeau.gaetan@gmail.com>",
-  "contributors": [ 
+  "contributors": [
     {
       "name": "Paul Panserrieu",
       "email": "paul@42loops.com"
-    } 
+    }
   ],
-  "dependencies" : {
-    "q"   :  "1.2.x"
+  "dependencies": {
+    "q": "1.2.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
